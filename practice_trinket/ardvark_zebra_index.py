@@ -12,7 +12,7 @@
 
 def aardvark(string):
     # addd code here that returns the answer
-    if string[0] == 'a':
+    if string[0] == 'a' or string[0] == 'A':
         return 'aardvark'
     else:
         return 'zebra'
@@ -21,3 +21,4 @@ def aardvark(string):
 
 print(aardvark("arg"))
 print(aardvark("Trinket"))
+print(aardvark("Argss"))
