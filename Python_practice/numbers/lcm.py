@@ -20,8 +20,10 @@ def lcm(x,y):
     while(True):
         if((greater % x == 0) and (greater %y == 0)):
             lcm = greater
+
             break
         greater +=1
+        print(greater)
     return lcm
 
 
