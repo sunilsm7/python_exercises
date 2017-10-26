@@ -1,5 +1,5 @@
 """
-	accept only 0, 1 and 2 values and return sorted list without using sort function.
+	accept only 0, 1 and 2 values and return sorted list without using built in sorted function.
 	input: [0,1,2,0,2]
 	output: [0,0,1,2,2]
 """

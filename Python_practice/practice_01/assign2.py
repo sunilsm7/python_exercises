@@ -15,14 +15,11 @@ def checkResult(list):
 		dict[n] = list.count(n)
 	return dict
 
-
 result = checkResult(list)
-#print(result)
+print(result)
 
-def returnDict(result):
-	list = [n for n in result.values()]
-	for k in result:
-		print("key:{} value:{}".format(k,result[k]))
-	return result
+# def returnDict(result):
+# 	list = [n for n in result.values()]
+# 	return result
 
-print(returnDict(result))
+# print(returnDict(result))

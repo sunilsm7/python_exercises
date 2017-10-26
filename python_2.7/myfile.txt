@@ -1,0 +1,8 @@
+We have to point out one possible problem: 
+What happens if you open a file for writing, and this file already exists.
+Be happy,
+if you had a backup of this file,
+if you need it, because as soon as an open() with a "w" has been executed the file will be removed.
+This is often what you want,
+but sometimes you just want to append to the file,
+like it's the case with logfiles

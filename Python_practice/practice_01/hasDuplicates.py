@@ -3,7 +3,7 @@ Write a function called has_duplicates that takes a list and returns True,
 if there is any element that appears more than once.
 It should not modify the original list.
 """
-def removeDuplicates(list):
+def checkDuplicates(list):
 	new_list = []
 	for item in list:
 		if item not in new_list:
@@ -13,7 +13,7 @@ def removeDuplicates(list):
 def hasDuplicates(list):
 	# if len(list) != len(set(list)):
 	# 	return False
-	if len(list) != len(removeDuplicates(list)):
+	if len(list) != len(checkDuplicates(list)):
 		return False
 	return True
 

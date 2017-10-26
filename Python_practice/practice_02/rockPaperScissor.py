@@ -46,7 +46,6 @@ def checkResults(user1,user2):
 		user2_choice_number = choice_to_number(user2)
 
 	if user1_choice_number == user2_choice_number:
-
 		return "It's Tie"
 	elif (user1_choice_number - user2_choice_number)%3 == 1:
 		return 'user1 wins!!!'

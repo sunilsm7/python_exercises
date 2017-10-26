@@ -8,7 +8,6 @@ num = int(input('Enter number:'))
 
 # Solution 1
 def checkNumPresent(list):
-	list = list
 	newList = []
 	for n in range(len(list)):
 		#print("number {} at index {}".format(list[n], n))

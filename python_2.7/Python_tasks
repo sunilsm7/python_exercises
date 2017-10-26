@@ -1,0 +1,260 @@
+Question 1:
+Define a function which can generate and print a tuple where the value are square of numbers between 1 and 20 (both included). 
+
+
+
+def fun():
+	list1 = []
+	b = 0
+	a = input('\nenter the range\n')
+	for i in range(a):
+		b = i**2
+		list1.append(b)
+	print " " , tuple(list1)
+		
+def main(): 
+
+	fun()
+
+if __name__=="__main__":
+	main()
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 2:
+With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first half values in one line and the last half values in one line. 
+
+
+def fun():
+	tuple1 = ()
+	a = input('\nenter input range\n')
+	tuple1 = tuple(range(a))
+	print "\n",tuple1
+	a = len(tuple1)
+	a = a/2
+	print "\n",tuple1[:a],"\n",tuple1[a:]
+
+
+def main(): 
+	fun()
+
+
+if __name__=="__main__":
+	main()
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Question 3:
+Write a program to generate and print another tuple whose values are even numbers in the given tuple (1,2,3,4,5,6,7,8,9,10). 
+
+
+
+
+def fun():
+	b = 0
+	list1=[]
+	a = input('\nenter your range\n')
+
+	for i in range(a):
+		b = a*1
+		list1.append(b)
+		print "\nYour entries:-\n ",tuple(list1)
+
+	for j in range(a):
+		if j%2 == 0:
+			print "\neven number:-\n",j
+		else:
+			print "\nOdd number:-\n", j
+
+def main(): 
+
+	fun()
+
+if __name__=="__main__":
+	main()
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Question 4:
+Write a program which can filter even numbers in a list by using filter function. The list is: [1,2,3,4,5,6,7,8,9,10].
+
+
+
+def fun():
+	list1=[]
+	
+	a = input('\nenter the range\n')
+	list1=range(a)
+	print " ",list1
+	print "",filter(lambda x:x%2==0,list1)
+		
+def main(): 
+
+	fun()
+
+if __name__=="__main__":
+	main()
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Question 5:
+Write a program which can map() to make a list whose elements are square of elements in [1,2,3,4,5,6,7,8,9,10].
+
+
+
+def fun():
+	list1=[]
+	Maplist=[]
+	a = input('\nenter the range\n')
+	list1=range(a)
+	print " ",list1
+	Maplist=map(lambda x:x**2,list1)
+	print " ",Maplist
+
+def main(): 
+
+	fun()
+
+if __name__=="__main__":
+	main()
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Question 6: 
+You are required to write a program to sort the (name, age, height) tuples by ascending order where name is string, age and height are numbers. The tuples are input by console. The sort criteria is:
+1: Sort based on name;
+2: Then sort based on age;
+3: Then sort by score.
+The priority is that name > age > score.
+If the following tuples are given as input to the program:
+Tom,19,80
+John,20,90
+Jony,17,91
+Jony,17,93
+Json,21,85
+Then, the output of the program should be:
+[('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
+
+
+
+
+def fun():
+	list1=[]
+	tuple1=()
+	name=()
+	age=()
+	score=()
+	i=0
+	while i<5:
+		n = raw_input('\nenter name\n')
+		name = n
+		a = raw_input('\nenter age\n')
+		age = a
+		s = raw_input('\nenter score\n')
+		score = s
+		tuple1=(name,age,score) 
+		list1.append(tuple1)
+		print "",list1
+		list1.sort()
+		print "\nAnd the data is:-\n",list1
+		i+=1
+
+def main(): 
+	fun()
+
+
+if __name__=="__main__":
+	main()
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 7: 
+Define a class with a generator which can iterate the numbers, which are divisible by 7, between a given range 0 and n.
+
+
+def fun():
+	a = input('\nenter input range\n')
+	for n in range(a):
+		if n%7==0:
+			print "divided by 7\n",n	
+		else:
+			print'\nnot divided by 7\n', n
+def main(): 
+	fun()
+
+
+if __name__=="__main__":
+	main()
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Question 8:
+ A robot moves in a plane starting from the original point (0,0). The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps. The trace of robot movement is shown as the following:
+UP 5
+DOWN 3
+LEFT 3
+RIGHT 2
+The numbers after the direction are steps. Please write a program to compute the distance from current position after a sequence of movement and original point. If the distance is a float, then just print the nearest integer.
+Example: If the following tuples are given as input to the program:
+UP 5
+DOWN 3
+LEFT 3
+RIGHT 2
+Then, the output of the program should be : 2
+
+
+def fun():
+
+	origin = { "x": 0, "y": 0 }
+
+	while(1):
+
+		value  = raw_input("-> ")
+
+		if value=='':
+			break
+		else: 
+			direction , val = value.split(' ')
+			
+			if direction == "U" or direction =="u":
+				origin["y"] += int(val)
+
+			elif direction == "D" or direction =="d":
+				origin["y"] -= int(val)
+
+			elif direction == "L" or direction =="l":
+				origin["x"] -= int(val)
+
+			elif direction == "R" or direction =="r":
+				origin["x"] += int(val)
+
+	x =	round( (origin["x"]**2 + origin["y"]**2 )**0.5 )
+
+	print 'result for above operation is :',int(x)
+
+def main(): 
+	fun()
+
+
+if __name__=="__main__":
+	main()
+
